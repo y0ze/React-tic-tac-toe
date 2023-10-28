@@ -12,23 +12,17 @@ export default function Board(props) {
     console.log(positions);
   }
 
-  // let cells = [];
-  // for(let i = 0; i < size; i++) {
-  //   for(let j = 0; j < size; j++) {
-  //     cells.push(<Cell cellType = {positions[i][j]} onCellClicked={() => onCellClicked(i, j)}></Cell>)
-  //   }
-  // }
+  let cells = [];
+  for(let i = 0; i < size; i++) {
+    for(let j = 0; j < size; j++) {
+      cells.push(<Cell cellType = {positions[i][j]} onCellClicked={() => onCellClicked(i, j)}></Cell>)
+    }
+  }
+  console.log(positions[1]);
   return (
     <div className="tic-container">
       <div id="grid-container">
-        {positions.map((item, i) => (
-          item.map((move, j) => (
-            <Cell 
-              cellType = {positions[i][j]} 
-              onCellClicked={() => onCellClicked(i, j)}>
-            </Cell>
-          ))
-        ))}
+        {cells}
       </div>
     </div>
   );
