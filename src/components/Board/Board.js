@@ -3,14 +3,16 @@ import { useState, useEffect } from 'react';
 import Cell from '../Cell/Cell';
 export default function Board(props) {
   const { size, winLength} = props;
-  const { positions, setPositions } = useState([[], [], []]);
-  let move = 'x';
+  const [ positions, setPositions ] = useState(Array.from({ length: size }, () => []));
+  const [ turn, setTurn ] = useState('x');
 
   function onCellClicked(gridRow, gridCol) {
-    console.log(`click pe ${gridRow}: ${gridCol}`);
-    positions[gridRow][gridCol] = move;
-    console.log(positions);
+    // console.log(`click pe ${gridRow}: ${gridCol}`);
+    positions[gridRow][gridCol] = turn;
+    setPositions([...positions]);
+    setTurn(turn === 'x' ? 'o' : 'x');
   }
+
 
   let cells = [];
   for(let i = 0; i < size; i++) {
@@ -18,7 +20,6 @@ export default function Board(props) {
       cells.push(<Cell cellType = {positions[i][j]} onCellClicked={() => onCellClicked(i, j)}></Cell>)
     }
   }
-  console.log(positions[1]);
   return (
     <div className="tic-container">
       <div id="grid-container">
