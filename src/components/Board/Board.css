@@ -1,0 +1,19 @@
+.tic-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 800px;
+  max-height: 1100px;
+  margin: 0 auto;
+  
+}
+
+#grid-container {
+  grid-template-columns: auto auto auto ;
+  padding: 30px;
+  margin-bottom: auto;
+  cursor: pointer;
+  display: grid;
+}
+

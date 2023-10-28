@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.animate-character
+{
+  cursor: default;
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 15vmin;
+  font-weight: 300;;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+h3 {
+  font-size: 15vmin;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.selectGameBtn {
+  position: relative;
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 0.5em;
+  background-color: rgb(14, 235, 169);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 3vmin;
+  font-weight: 300;
+  margin-right: 15px;
+}
+
+.pressed {
+  background-color: lightblue; 
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+
+.startMenu {
+  background-color: #ffffff;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.selectGameP {
+  margin-bottom: 20px;
+  display: flex;
+  cursor: default;
+  font-family: 'Rubik', sans-serif;
+  font-size: 5vmin;
+  font-weight: 300;
+}
+
+p{
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+  a{
+    width: 200px;
+  }
+
+.playerNamesP{
+  margin-bottom: 20px;
+  display: flex;
+  cursor: default;
+  font-family: 'Rubik', sans-serif;
+  font-size: 5vmin;
+  font-weight: 300;
+
+}
+input:invalid {
+  border: 2px dashed red;
+}
+
+#start-button{
+  box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #2acca1 5%, #6c7c7c 100%);
+	background-color:#44cba7;
+	border-radius:5px;
+	border:1px solid #00ce8d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+  margin-top: 10px;
+}
+
+#start-button:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+#start-button:active {
+	position:relative;
+	top:1px;
+}
+
+.effect-7{
+  border: 1px solid #ccc; 
+  padding: 7px 14px 9px; 
+  transition: 0.4s;
+}
+
+input[type="text"] {
+  font: 15px/24px 'Muli', sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+:focus {
+  outline: none;
+}
+
+.col-3 {
+  position: relative;
+  display: flex;
+  width: 50vh;
+  text-align-last: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-7~.focus-border:before,
+.effect-7~.focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50;
+  transition: 0.4s;
+}
+
+.effect-7~.focus-border:after {
+  top: auto;
+  bottom: 0;
+}
+
+.effect-7~.focus-border i:before,
+.effect-7~.focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #4caf50;
+  transition: 0.6s;
+}
+
+.effect-7~.focus-border i:after {
+  left: auto;
+  right: 0;
+}
+
+.effect-7:focus~.focus-border:before,
+.effect-7:focus~.focus-border:after {
+  left: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.effect-7:focus~.focus-border i:before,
+.effect-7:focus~.focus-border i:after {
+  top: 0;
+  height: 100%;
+  transition: 0.6s;
+}
+
